@@ -34,6 +34,7 @@ const App = () => {
         <MemoComponent color="red"></MemoComponent>
       </div>
       <Flower></Flower>
+      <h1>eslint prettier has been installed</h1>
     </div>
   );
 };
