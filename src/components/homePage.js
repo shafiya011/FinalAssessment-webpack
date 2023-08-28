@@ -6,6 +6,7 @@ import {
   HomePageContainer,
   Description,
   ExportBtn,
+  HomeImgContainer,
 } from '../stylings/homepageStylings';
 
 const HomePage = () => {
@@ -16,9 +17,9 @@ const HomePage = () => {
         <div>
           <HomeSvg />
         </div>
-        <div>
+        <HomeImgContainer>
           <HomePageSvg />
-        </div>
+        </HomeImgContainer>
       </div>
       <Description>
         Select your required report and timeline then click “Export Report” to

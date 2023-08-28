@@ -22,4 +22,12 @@ export const ExportBtn = styled(Button)`
   padding: 15px 30px;
   align-items: center;
   gap: 8px;
+  border-radius: 3px;
+  background: #275f98;
+`;
+export const HomeImgContainer = styled.div`
+  //   position: absolute;
+`;
+export const HomeImgBackground = styled.div`
+  position: relative;
 `;
