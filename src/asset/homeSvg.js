@@ -1,8 +1,9 @@
 import React from 'react';
+import { HomeBackgroundContainer } from '../stylings/homeImage';
 
-const HomeSvg = () => {
+const HomeBackground = () => {
   return (
-    <div>
+    <HomeBackgroundContainer>
       <svg
         width="319"
         height="152"
@@ -196,8 +197,8 @@ const HomeSvg = () => {
           </clipPath>
         </defs>
       </svg>
-    </div>
+    </HomeBackgroundContainer>
   );
 };
 
-export default HomeSvg;
+export default HomeBackground;

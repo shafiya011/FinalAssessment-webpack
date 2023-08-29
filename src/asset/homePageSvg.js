@@ -1,8 +1,9 @@
 import React from 'react';
+import { HomeImageContainer } from '../stylings/homeImage';
 
 const HomePageSvg = () => {
   return (
-    <div>
+    <HomeImageContainer>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="146"
@@ -223,7 +224,7 @@ const HomePageSvg = () => {
           </clipPath>
         </defs>
       </svg>
-    </div>
+    </HomeImageContainer>
   );
 };
 

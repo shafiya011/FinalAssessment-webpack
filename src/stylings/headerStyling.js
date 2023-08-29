@@ -1,10 +1,11 @@
-import { Button,Tag } from "antd";
-import React from "react";
-import { styled } from "styled-components";
+import { Button, Tag, Divider } from 'antd';
+import React from 'react';
+import { styled } from 'styled-components';
 export const Navbar = styled.nav`
   width: 1220px;
-  height:70px;
-  border:1px solid black;
+  height: 70px;
+  // border: 1px solid black;
+  background: #fff;
   box-sizing: border-box;
   margin: 0px;
   display: flex;
@@ -33,18 +34,18 @@ export const OrgName = styled.div`
   font-size: 18px;
   font-weight: 700;
   color: rgba(65, 83, 103, 1);
-  font-family: "SF Pro Display";
-  font-style:normal;
+  font-family: 'SF Pro Display';
+  font-style: normal;
   line-height: normal;
   letter-spacing: -0.18px;
   text-transform: capitalize;
-  margin-bottom:5px;
+  margin-bottom: 5px;
 `;
 export const MenuFold = styled.div`
   font-size: 23px;
   text-align: center;
   /* padding: 5px; */
-  margin:20px 23px;
+  margin: 20px 23px;
 `;
 export const Letter = styled.div`
   border-radius: 50%;
@@ -52,14 +53,15 @@ export const Letter = styled.div`
 
 export const NameCard = styled.div`
   color: rgb(255, 255, 255);
-  background-color: rgb(52, 73, 94);
-  border-radius: 50%;
-  font-size: 19px;
+  // background-color: rgb(52, 73, 94);
+  border: 1px solid black;
+  border-radius: 30px;
+  // font-size: 19px;
   width: 36px;
-  height: 35px;
+  height: 36px;
   text-align: center;
-  padding-top: 5px;
-  margin: 0px 7px;
+  // padding-top: 5px;
+  margin-right: 10px;
 `;
 export const HeaderName = styled.label`
   color: var(--grey-100, #485c72);
@@ -93,32 +95,47 @@ export const PageTitle = styled.div`
   text-transform: capitalize;
 `;
 export const GuideBtn = styled(Button)`
-  margin-left: 15px;
+  margin-right: 15px;
   outline: none;
   background-color: rgba(240, 242, 244, 1);
   padding: 6px;
   // fill: var(--grey-t-92, #f0f2f4);
 `;
-export const DefaultTag=styled(Tag)`
-display: flex;
-padding: 5px 14px 6px 14px;
-justify-content: center;
-align-items: center;
-text-align:center;
-/* width:57px; */
-/* height:19px; */
-border-radius: 2px;
-border: 1px solid var(--blue-t-65, #AFC8E1);
-background: var(--blue-t-92, #EDF3F8);
-margin-left:15px;
-gap: 10px;
-color: var(--blue-100, #1B63A9);
-/* font-family: SF Pro Display; */
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-font-variant: all-small-caps;`
+export const DefaultTag = styled(Tag)`
+  display: flex;
+  padding: 5px 14px 6px 14px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* width:57px; */
+  /* height:19px; */
+  border-radius: 2px;
+  border: 1px solid var(--blue-t-65, #afc8e1);
+  background: var(--blue-t-92, #edf3f8);
+  margin-right: 15px;
+  gap: 10px;
+  color: var(--blue-100, #1b63a9);
+  /* font-family: SF Pro Display; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-variant: all-small-caps;
+`;
 export const Bellbtn = styled.div`
-margin-left:15px;
-`
+  margin-right: 15px;
+`;
+export const VerticalDivider = styled(Divider)`
+  width: 1px;
+  height: 20px;
+  margin: 0px;
+  margin-right: 15px;
+`;
+export const UserImage = styled.img`
+  display: flex;
+  width: 36px;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+`;

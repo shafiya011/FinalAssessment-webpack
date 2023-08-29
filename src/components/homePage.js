@@ -1,5 +1,5 @@
 import React from 'react';
-import HomeSvg from '../asset/homeSvg';
+import HomeBackground from '../asset/homeSvg';
 import HomePageSvg from '../asset/homePageSvg';
 import { Form, Select, Button, DatePicker } from 'antd';
 import {
@@ -7,55 +7,77 @@ import {
   Description,
   ExportBtn,
   HomeImgContainer,
+  ImageContainer,
+  FormWrapper1,
+  SelectField1,
+  FormWrapper2,
+  SelectReport,
+  ReportFormat,
+  SelectOption,
 } from '../stylings/homepageStylings';
+const SelectOptions = [
+  'Survey Results',
+  'Account Deactivation Details',
+  'Review Managemen',
+  'publish History',
+  'User details',
+  'Account Statistics report',
+];
 
 const HomePage = () => {
   const { RangePicker } = DatePicker;
+  const handleChange = (value) => {
+    console.log(`Selected: ${value}`);
+  };
   return (
     <HomePageContainer>
-      <div>
-        <div>
-          <HomeSvg />
-        </div>
-        <HomeImgContainer>
-          <HomePageSvg />
-        </HomeImgContainer>
-      </div>
+      <ImageContainer>
+        <HomeBackground />
+        <HomePageSvg />
+      </ImageContainer>
+
       <Description>
         Select your required report and timeline then click “Export Report” to
         generate.
       </Description>
       <div>
-        <div>
-          <Form style={{ display: 'flex' }}>
-            <Form.Item name="selectreport" label="Select Report">
-              <Select value="SurveyResults">
-                <Select.Option value="Select Report1">
-                  Select Report1
-                </Select.Option>
-                <Select.Option value="demo">Select Report2</Select.Option>
-                <Select.Option value="demo">Select Report3</Select.Option>
-              </Select>
-            </Form.Item>
-            <Form.Item label="Report Format">
-              <Select value="XLS">
-                <Select.Option value="demo">XLS</Select.Option>
-              </Select>
-            </Form.Item>
-          </Form>
-        </div>
-        <div>
-          <Form style={{ display: 'flex' }}>
-            <Form.Item label="Report Period">
-              <RangePicker />
-            </Form.Item>
-            <Form.Item label="Action">
-              <Select value="Download">
-                <Select.Option value="demo">Download</Select.Option>
-              </Select>
-            </Form.Item>
-          </Form>
-        </div>
+        <FormWrapper1>
+          <div>
+            <p>Select Report</p>
+            <SelectReport>
+              <SelectOption
+                defaultValue={SelectOptions[0]}
+                onChange={handleChange}
+              >
+                {SelectOptions.map((values, index) => (
+                  <option key={index} value={`values ${index + 1}`}>
+                    {values}
+                  </option>
+                ))}
+              </SelectOption>
+            </SelectReport>
+          </div>
+          <div>
+            <p>Report Format</p>
+            <ReportFormat defaultValue="XLS" onChange={handleChange}>
+              {SelectOptions.map((values, index) => (
+                <option></option>
+              ))}
+            </ReportFormat>
+          </div>
+        </FormWrapper1>
+        <FormWrapper2>
+          <div>
+            <p>Report Period</p>
+            <RangePicker />
+          </div>
+          <div>
+            <p>Action</p>
+            <ReportFormat value="Download">
+              <Select.Option value="demo">Download</Select.Option>
+            </ReportFormat>
+          </div>
+        </FormWrapper2>
         <div>
           <ExportBtn type="primary" htmlType="submit">
             Export Report

@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import {
   SearchOutlined,
   MenuUnfoldOutlined,
   BellOutlined,
-} from "@ant-design/icons";
-import { Tag, Button, Breadcrumb, Divider } from "antd";
+} from '@ant-design/icons';
+import { Tag, Button, Breadcrumb } from 'antd';
 import {
   Navbar,
   NavTool,
@@ -18,10 +18,13 @@ import {
   GuideBtn,
   DefaultTag,
   Bellbtn,
+  VerticalDivider,
+  UserImage,
   BreadCrumbContainer,
-  HamburgerContainer
-} from "../stylings/headerStyling";
-import Guide from "../asset/guide";
+  HamburgerContainer,
+} from '../stylings/headerStyling';
+import Guide from '../asset/guide';
+import DropDown from '../asset/useActionDropdown';
 const Header = () => {
   return (
     <Navbar className="reviewNavbar">
@@ -38,14 +41,14 @@ const Header = () => {
               separator=">"
               items={[
                 {
-                  title: "Organisation",
+                  title: 'Organisation',
                 },
                 {
-                  title: "Accounts",
+                  title: 'Accounts',
                 },
                 {
-                  title: "Reviews",
-                  href: "",
+                  title: 'Reviews',
+                  href: '',
                 },
               ]}
             />
@@ -68,13 +71,22 @@ const Header = () => {
           <Button shape="circle" icon={<BellOutlined />} />
         </Bellbtn>
 
-        <Divider type="vertical" />
-        <NameCard>S</NameCard>
+        <VerticalDivider type="vertical" />
+        <NameCard>
+          {/* <img src="../asset/UserImage.png" alt="userImage"></img> */}
+          <UserImage
+            src="https://s3-alpha-sig.figma.com/img/7ffe/452c/edd0f87dda0d02800c7b0ef846a648c9?Expires=1694390400&amp;Signature=I53K8PH-zjWP3~CiIdjIjk1GFNKlUDZjwWN1VpQqz1IVZ-LdKSeqlOAge85hXjKyqs-C5hfUtH3jLclzh47LQXSk~xcDWQNIac7GA9C~o7oOzbfR7Y7KIsVFsXLFJooCizWafv4e8EYAaUCyAjUyx1TspgX4ozMeyzXzX2asdm3rIbUMhqUpzXK1YXfDjwgBc8cX39aKX9vdqHO1pnwbqOc7Q6ce7D44rvZV5c4Y5tkNNK39UqWcVVRCuma~4X-U~c8IjKfOyctGOHWzS01lXDgZkl48XLz4qzg2TFXBhL1y6-C73WWHj0XvsKUQ1XOcnJE-FFO77JNU~K4YhJVVZQ__&amp;Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            alt="userImage"
+          ></UserImage>
+        </NameCard>
         <div>
           <div>
-            <HeaderName className="myName">Shafiya FA</HeaderName>
+            <HeaderName className="myName">Bessy Cooper</HeaderName>
+            <div>
+              <DropDown />
+            </div>
           </div>
-          <Post className="admin">Onboarding Admin</Post>
+          <Post className="admin">Super Admin</Post>
         </div>
       </NavTool>
     </Navbar>
