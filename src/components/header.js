@@ -20,6 +20,10 @@ import {
   Bellbtn,
   VerticalDivider,
   UserImage,
+  ImageCard,
+  NameContainer,
+  AdminWrapper,
+  BreadCrums,
   BreadCrumbContainer,
   HamburgerContainer,
 } from '../stylings/headerStyling';
@@ -36,18 +40,18 @@ const Header = () => {
         <Heading>
           <OrgName>North Pacific</OrgName>
           <div>
-            <Breadcrumb
+            <BreadCrums
               className="breadCrums"
               separator=">"
               items={[
                 {
-                  title: 'Organisation',
+                  title: 'Organisations',
                 },
                 {
                   title: 'Accounts',
                 },
                 {
-                  title: 'Reviews',
+                  title: 'Reports',
                   href: '',
                 },
               ]}
@@ -72,22 +76,22 @@ const Header = () => {
         </Bellbtn>
 
         <VerticalDivider type="vertical" />
-        <NameCard>
+        <ImageCard>
           {/* <img src="../asset/UserImage.png" alt="userImage"></img> */}
           <UserImage
             src="https://s3-alpha-sig.figma.com/img/7ffe/452c/edd0f87dda0d02800c7b0ef846a648c9?Expires=1694390400&amp;Signature=I53K8PH-zjWP3~CiIdjIjk1GFNKlUDZjwWN1VpQqz1IVZ-LdKSeqlOAge85hXjKyqs-C5hfUtH3jLclzh47LQXSk~xcDWQNIac7GA9C~o7oOzbfR7Y7KIsVFsXLFJooCizWafv4e8EYAaUCyAjUyx1TspgX4ozMeyzXzX2asdm3rIbUMhqUpzXK1YXfDjwgBc8cX39aKX9vdqHO1pnwbqOc7Q6ce7D44rvZV5c4Y5tkNNK39UqWcVVRCuma~4X-U~c8IjKfOyctGOHWzS01lXDgZkl48XLz4qzg2TFXBhL1y6-C73WWHj0XvsKUQ1XOcnJE-FFO77JNU~K4YhJVVZQ__&amp;Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
             alt="userImage"
           ></UserImage>
-        </NameCard>
-        <div>
-          <div>
+        </ImageCard>
+        <AdminWrapper>
+          <NameContainer>
             <HeaderName className="myName">Bessy Cooper</HeaderName>
-            <div>
+            {/* <div> */}
               <DropDown />
-            </div>
-          </div>
+            {/* </div> */}
+          </NameContainer>
           <Post className="admin">Super Admin</Post>
-        </div>
+        </AdminWrapper>
       </NavTool>
     </Navbar>
   );

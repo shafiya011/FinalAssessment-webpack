@@ -1,4 +1,4 @@
-import { Button, Tag, Divider } from 'antd';
+import { Button, Tag, Divider, Breadcrumb } from 'antd';
 import React from 'react';
 import { styled } from 'styled-components';
 export const Navbar = styled.nav`
@@ -14,7 +14,7 @@ export const Navbar = styled.nav`
   /* border-bottom: 1px solid rgb(228, 231, 234); */
   position: sticky;
   z-index: 50;
-  padding: 10px;
+  /* padding: 10px; */
 `;
 export const NavTool = styled.div`
   display: flex;
@@ -24,10 +24,11 @@ export const NavTool = styled.div`
 export const LeftHead = styled.div`
   display: flex;
   align-items: center;
+  margin:14px 0px;
 `;
 export const Heading = styled.div`
-  margin-left: 14px;
-  padding-bottom: 5px;
+  /* margin-bottom: 13px; */
+  /* padding-bottom: 5px; */
   width: 100%;
 `;
 export const OrgName = styled.div`
@@ -45,13 +46,33 @@ export const MenuFold = styled.div`
   font-size: 23px;
   text-align: center;
   /* padding: 5px; */
-  margin: 20px 23px;
+  margin: 23px 20px;
 `;
 export const Letter = styled.div`
   border-radius: 50%;
 `;
+export const BreadCrums=styled(Breadcrumb)`
 
-export const NameCard = styled.div`
+color: var(--blue-t-15, #3D7AB6);
+/* font-family: SF Pro Display; */
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.13px;
+text-transform: capitalize;
+.ant-breadcrumb a{
+  color: rgba(65, 83, 103, 1);
+font-family: SF Pro Display;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.13px;
+text-transform: capitalize;
+}`
+
+export const ImageCard = styled.div`
   color: rgb(255, 255, 255);
   // background-color: rgb(52, 73, 94);
   border: 1px solid black;
@@ -73,7 +94,16 @@ export const HeaderName = styled.label`
   line-height: normal;
   letter-spacing: -0.13px;
   text-transform: capitalize;
+  margin-right:10px;
 `;
+export const AdminWrapper=styled.div`
+margin-right:20px;`
+
+export const NameContainer=styled.div`
+display: flex;
+align-items: flex-start;
+/* gap: 3px; */
+`
 export const Post = styled.label`
   color: var(--grey-t-50, #a3adb8);
   font-family: SF Pro Display;
@@ -103,18 +133,18 @@ export const GuideBtn = styled(Button)`
 `;
 export const DefaultTag = styled(Tag)`
   display: flex;
-  padding: 5px 14px 6px 14px;
+  padding: 4px 14px 6px 14px;
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* width:57px; */
-  /* height:19px; */
+  /* width:57px;  */
+   /* height:19px; */
   border-radius: 2px;
   border: 1px solid var(--blue-t-65, #afc8e1);
   background: var(--blue-t-92, #edf3f8);
   margin-right: 15px;
   gap: 10px;
-  color: var(--blue-100, #1b63a9);
+  color: rgba(27, 99, 169, 1);
   /* font-family: SF Pro Display; */
   font-size: 16px;
   font-style: normal;

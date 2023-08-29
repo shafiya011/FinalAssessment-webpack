@@ -14,6 +14,10 @@ import {
   SelectReport,
   ReportFormat,
   SelectOption,
+  ReportPeriod,
+  Actions,
+  SelectTitle,
+  BtnSpan
 } from '../stylings/homepageStylings';
 const SelectOptions = [
   'Survey Results',
@@ -25,7 +29,7 @@ const SelectOptions = [
 ];
 
 const HomePage = () => {
-  const { RangePicker } = DatePicker;
+  // const { RangePicker } = DatePicker;
   const handleChange = (value) => {
     console.log(`Selected: ${value}`);
   };
@@ -43,8 +47,8 @@ const HomePage = () => {
       <div>
         <FormWrapper1>
           <div>
-            <p>Select Report</p>
-            <SelectReport>
+            <SelectTitle>Select Report</SelectTitle>
+            
               <SelectOption
                 defaultValue={SelectOptions[0]}
                 onChange={handleChange}
@@ -55,32 +59,32 @@ const HomePage = () => {
                   </option>
                 ))}
               </SelectOption>
-            </SelectReport>
+            
           </div>
           <div>
-            <p>Report Format</p>
+            <SelectTitle>Report Format</SelectTitle>
             <ReportFormat defaultValue="XLS" onChange={handleChange}>
               {SelectOptions.map((values, index) => (
-                <option></option>
+                <option>{values}</option>
               ))}
             </ReportFormat>
           </div>
         </FormWrapper1>
         <FormWrapper2>
           <div>
-            <p>Report Period</p>
-            <RangePicker />
+            <SelectTitle>Report Period</SelectTitle>
+            <ReportPeriod />
           </div>
           <div>
-            <p>Action</p>
-            <ReportFormat value="Download">
-              <Select.Option value="demo">Download</Select.Option>
-            </ReportFormat>
+            <SelectTitle>Action</SelectTitle>
+            <Actions defaultValue="Download"value="Download">
+              <option value="demo">Download</option>
+            </Actions>
           </div>
         </FormWrapper2>
         <div>
           <ExportBtn type="primary" htmlType="submit">
-            Export Report
+           <BtnSpan> Export Report </BtnSpan>
           </ExportBtn>
         </div>
       </div>

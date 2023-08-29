@@ -46,6 +46,7 @@ border-radius:0px;
 export const ContentWrapper = styled.div`
   height: 628px;
   width: 339px;
+  overflow:scroll;
 `;
 export const FeedContainer = styled.div`
   display: flex;
