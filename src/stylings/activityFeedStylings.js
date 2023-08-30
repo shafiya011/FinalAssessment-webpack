@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Tag } from 'antd';
 export const ActivityWrapper = styled.div`
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
   height: 714px;
   width: 380px;
   flex-shrink: 0;
@@ -19,6 +21,8 @@ export const ActivityWrapper = styled.div`
 export const ActivityHead = styled.div`
   height: 42px;
   flex-shrink: 0;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
   border-radius: 3px 3px 0px 0px;
   display: flex;
   justify-content: space-between;
@@ -83,6 +87,7 @@ export const UserName = styled.p`
   color: var(--grey-100, #485c72);
   font-size: 14px;
   font-style: normal;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   line-height: normal;
   margin: 0px;
