@@ -68,10 +68,11 @@ export const FormWrapper2 = styled.div`
 export const SelectOption = styled.select`
 width:358px;
 height:50px;
-/* border-radius: 3px; */
-background: #FFF;
 margin-bottom:20px;
 margin-right:25px;
+border-radius: 3px;
+border: 1px solid var(--grey-t-75, #D1D6DC);
+background: #FFF;
 
 `;
 export const ReportFormat = styled.select`
