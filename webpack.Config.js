@@ -24,17 +24,6 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.svg$/,
-      //   use: [
-      //     {
-      //       loader: 'svg-url-loader',
-      //       options: {
-      //         limit: 8192, // Limit the inline file size in bytes (optional)
-      //       },
-      //     },
-      //   ],
-      // },
       {
         test: /\.svg$/,
         use: [
@@ -42,6 +31,10 @@ module.exports = {
             loader: 'file-loader',
           },
         ],
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.js$/,

@@ -1,23 +1,19 @@
 import React from 'react';
 import HomeBackground from '../asset/homeSvg';
 import HomePageSvg from '../asset/homePageSvg';
-import { Form, Select, Button, DatePicker } from 'antd';
 import {
   HomePageContainer,
   Description,
   ExportBtn,
-  HomeImgContainer,
   ImageContainer,
   FormWrapper1,
-  SelectField1,
   FormWrapper2,
-  SelectReport,
   ReportFormat,
   SelectOption,
   ReportPeriod,
   Actions,
   SelectTitle,
-  BtnSpan
+  BtnSpan,
 } from '../stylings/homepageStylings';
 const SelectOptions = [
   'Survey Results',
@@ -29,7 +25,6 @@ const SelectOptions = [
 ];
 
 const HomePage = () => {
-  // const { RangePicker } = DatePicker;
   const handleChange = (value) => {
     console.log(`Selected: ${value}`);
   };
@@ -48,25 +43,20 @@ const HomePage = () => {
         <FormWrapper1>
           <div>
             <SelectTitle>Select Report</SelectTitle>
-            
-              <SelectOption
-                defaultValue={SelectOptions[0]}
-                onChange={handleChange}
-              >
+            <div>
+              <SelectOption onChange={handleChange}>
                 {SelectOptions.map((values, index) => (
                   <option key={index} value={`values ${index + 1}`}>
                     {values}
                   </option>
                 ))}
               </SelectOption>
-            
+            </div>
           </div>
           <div>
             <SelectTitle>Report Format</SelectTitle>
             <ReportFormat defaultValue="XLS" onChange={handleChange}>
-              {SelectOptions.map((values, index) => (
-                <option>{values}</option>
-              ))}
+              <option value="XLS">XLS</option>
             </ReportFormat>
           </div>
         </FormWrapper1>
@@ -77,14 +67,14 @@ const HomePage = () => {
           </div>
           <div>
             <SelectTitle>Action</SelectTitle>
-            <Actions defaultValue="Download"value="Download">
+            <Actions defaultValue="Download" value="Download">
               <option value="demo">Download</option>
             </Actions>
           </div>
         </FormWrapper2>
         <div>
           <ExportBtn type="primary" htmlType="submit">
-           <BtnSpan> Export Report </BtnSpan>
+            <BtnSpan> Export Report </BtnSpan>
           </ExportBtn>
         </div>
       </div>
