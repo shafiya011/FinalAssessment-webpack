@@ -44,7 +44,10 @@ const HomePage = () => {
           <div>
             <SelectTitle>Select Report</SelectTitle>
             <div>
-              <SelectOption onChange={handleChange}>
+              <SelectOption
+                defaultValue={SelectOptions[0]}
+                onChange={handleChange}
+              >
                 {SelectOptions.map((values, index) => (
                   <option key={index} value={`values ${index + 1}`}>
                     {values}

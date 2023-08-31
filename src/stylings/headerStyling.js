@@ -1,7 +1,8 @@
 import { Button, Tag, Divider, Breadcrumb } from 'antd';
 import { styled } from 'styled-components';
 export const Navbar = styled.nav`
-  width: 1220px;
+  font-family: 'Poppins', sans-serif;
+  // width: 1220px;
   height: 70px;
   background: #fff;
   box-sizing: border-box;
@@ -31,15 +32,18 @@ export const LeftHead = styled.div`
 `;
 export const Heading = styled.div`
   width: 100%;
+  font-family: 'Poppins', sans-serif;
 `;
 export const OrgName = styled.div`
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
   font-size: 18px;
   font-weight: 700;
   color: rgba(65, 83, 103, 1);
-  font-family: 'SF Pro Display';
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   line-height: normal;
-  letter-spacing: -0.18px;
+  letter-spacing: -0.15px;
   text-transform: capitalize;
   margin-bottom: 5px;
 `;
@@ -75,18 +79,15 @@ export const ImageCard = styled.div`
   color: rgb(255, 255, 255);
   border: 1px solid black;
   border-radius: 30px;
-
   width: 36px;
   height: 36px;
   text-align: center;
-
   margin-right: 10px;
 `;
 export const HeaderName = styled.label`
   color: var(--grey-100, #485c72);
   text-align: right;
-  font-family: SF Pro Display;
-  font-size: 13px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -104,7 +105,6 @@ export const NameContainer = styled.div`
 `;
 export const Post = styled.label`
   color: var(--grey-t-50, #a3adb8);
-  font-family: SF Pro Display;
   font-size: 12px;
   font-style: normal;
   font-weight: 300;

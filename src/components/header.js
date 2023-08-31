@@ -77,7 +77,7 @@ const Header = () => {
         </ImageCard>
         <AdminWrapper>
           <NameContainer>
-            <HeaderName className="myName">Bessy Cooper</HeaderName>
+            <HeaderName className="myName">Bessie Cooper</HeaderName>
 
             <DropDown />
           </NameContainer>

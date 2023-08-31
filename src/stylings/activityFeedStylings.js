@@ -2,9 +2,8 @@ import styled from 'styled-components';
 import { Tag } from 'antd';
 export const ActivityWrapper = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
   height: 714px;
-  width: 380px;
+  // width: 380px;
   flex-shrink: 0;
   border-radius: 3px;
   background: #fff;
@@ -43,7 +42,6 @@ export const Title = styled.div`
 export const ViewMore = styled.div`
   color: var(--blue-s-10, #185998);
   font-size: 14px;
-  font-style: normal;
   margin: 13px 20px 12px 0px;
   font-weight: 600;
   line-height: normal;
@@ -77,7 +75,6 @@ export const FeedContainer = styled.div`
   display: flex;
   width: 100%;
   margin-bottom: 20px;
-
   border-bottom: 1px solid rgba(228, 231, 234, 1);
 `;
 export const DetailsContainer = styled.div`
@@ -203,7 +200,7 @@ export const ViewTag = styled(Tag)`
   margin: 0;
   width: 37px;
   height: 17px;
-  flex-shrink: 0;
+
   border-radius: 3px;
   border: 1px solid var(--blue-t-15, #3d7ab6);
   color: var(--blue-t-15, #3d7ab6);
@@ -217,13 +214,13 @@ export const ViewTag = styled(Tag)`
 export const NoDataTag = styled(Tag)`
   width: 92px;
   height: 17px;
-  flex-shrink: 0;
+
   border-radius: 3px;
   border: 1px solid var(--grey-t-35, #8895a3);
   color: var(--grey-t-35, #8895a3);
   text-align: center;
   font-size: 10px;
-  font-style: normal;
+
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;

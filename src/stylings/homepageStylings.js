@@ -3,9 +3,10 @@ import styled from 'styled-components';
 const { RangePicker } = DatePicker;
 export const HomePageContainer = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
-  width: 780px;
+  // width: 780px;
   height: 714px;
-  flex-shrink: 0;
+  margin: auto;
+  flex-grow: 1;
   border-radius: 3px;
   background: #fff;
   box-shadow: 0px 5px 10px 0px rgba(99, 116, 135, 0.1);
@@ -87,37 +88,55 @@ export const FormWrapper2 = styled.div`
   }
 `;
 
-export const SelectOption = styled.select`
+export const SelectOption = styled(Select)`
+  .ant-select-selector {
+    height: 50px !important;
+    padding: 8px 12px !important;
+    font-size: 16px;
+    color: rgba(72, 92, 114, 1);
+    font-weight: 200;
+    text-align: start;
+    border-radius: 3px;
+  }
   width: 358px;
-  height: 50px;
+  text-align: start;
   margin-bottom: 20px;
   margin-right: 25px;
   border-radius: 3px;
-  border: 1px solid var(--grey-t-75, #d1d6dc);
+  // border: 1px solid var(--grey-t-75, #d1d6dc);
   background: #fff;
   color: rgba(72, 92, 114, 1);
-  font-size: 15px;
+  // font-size: 16px;
   font-weight: 200;
-  padding: 15px 0px 16px 12px;
+  // padding: 15px 0px 16px 12px;
   font-family: 'Poppins', sans-serif;
   @media (max-width: 400px) {
     width: 350px;
   }
 `;
-export const ReportFormat = styled.select`
+export const ReportFormat = styled(Select)`
+  .ant-select-selector {
+    height: 50px !important;
+    padding: 8px 12px !important;
+    font-size: 16px;
+    color: rgba(72, 92, 114, 1);
+    font-weight: 200;
+    text-align: start;
+    border-radius: 3px;
+  }
   @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Karla:wght@200;400&family=Poppins:wght@100&display=swap');
   width: 177px;
   height: 50px;
   flex-shrink: 0;
   margin-bottom: 20px;
   border-radius: 3px;
-  border: 1px solid var(--grey-t-75, #d1d6dc);
+  // border: 1px solid var(--grey-t-75, #d1d6dc);
   background: #fff;
   color: rgba(72, 92, 114, 1);
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
   font-size: 15px;
-  padding: 15px 0px 16px 12px;
+  // padding: 15px 0px 16px 12px;
   @media (max-width: 400px) {
     width: 350px;
   }
@@ -138,17 +157,26 @@ export const ReportPeriod = styled(RangePicker)`
     margin-bottom: 20px;
   }
 `;
-export const Actions = styled.select`
+export const Actions = styled(Select)`
+  .ant-select-selector {
+    height: 50px !important;
+    padding: 8px 12px !important;
+    font-size: 16px;
+    color: rgba(72, 92, 114, 1);
+    font-weight: 200;
+    text-align: start;
+    border-radius: 3px;
+  }
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
   width: 177px;
   height: 50px;
   flex-shrink: 0;
   border-radius: 3px;
-  border: 1px solid var(--grey-t-75, #d1d6dc);
+  // border: 1px solid var(--grey-t-75, #d1d6dc);
   background: #fff;
   color: rgba(72, 92, 114, 1);
   font-size: 15px;
-  padding: 15px 0px 16px 12px;
+  // padding: 15px 0px 16px 12px;
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
   @media (max-width: 400px) {
