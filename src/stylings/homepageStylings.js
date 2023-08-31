@@ -97,19 +97,12 @@ export const SelectOption = styled(Select)`
     font-weight: 200;
     text-align: start;
     border-radius: 3px;
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
   }
   width: 358px;
-  text-align: start;
   margin-bottom: 20px;
   margin-right: 25px;
-  border-radius: 3px;
-  // border: 1px solid var(--grey-t-75, #d1d6dc);
-  background: #fff;
-  color: rgba(72, 92, 114, 1);
-  // font-size: 16px;
-  font-weight: 200;
-  // padding: 15px 0px 16px 12px;
-  font-family: 'Poppins', sans-serif;
   @media (max-width: 400px) {
     width: 350px;
   }
@@ -123,20 +116,14 @@ export const ReportFormat = styled(Select)`
     font-weight: 200;
     text-align: start;
     border-radius: 3px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    background: #fff;
   }
   @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Karla:wght@200;400&family=Poppins:wght@100&display=swap');
   width: 177px;
-  height: 50px;
-  flex-shrink: 0;
   margin-bottom: 20px;
-  border-radius: 3px;
-  // border: 1px solid var(--grey-t-75, #d1d6dc);
-  background: #fff;
-  color: rgba(72, 92, 114, 1);
-  font-family: 'Poppins', sans-serif;
-  font-weight: 200;
-  font-size: 15px;
-  // padding: 15px 0px 16px 12px;
   @media (max-width: 400px) {
     width: 350px;
   }
@@ -166,19 +153,11 @@ export const Actions = styled(Select)`
     font-weight: 200;
     text-align: start;
     border-radius: 3px;
+    font-family: 'Poppins', sans-serif;
   }
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
   width: 177px;
-  height: 50px;
-  flex-shrink: 0;
-  border-radius: 3px;
-  // border: 1px solid var(--grey-t-75, #d1d6dc);
   background: #fff;
-  color: rgba(72, 92, 114, 1);
-  font-size: 15px;
-  // padding: 15px 0px 16px 12px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 200;
   @media (max-width: 400px) {
     width: 350px;
     margin-bottom: 20px;

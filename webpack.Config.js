@@ -11,9 +11,9 @@ module.exports = {
   devtool: 'source-map',
   devServer: {
     static: {
-      directory: path.resolve(__dirname, 'dist'),
+      directory: path.resolve(__dirname, 'public'),
     },
-    port: 3000,
+    port: 8080,
     open: true,
     hot: true,
     compress: true,
@@ -58,7 +58,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: 'public/index.html',
     }),
   ],
   resolve: {
