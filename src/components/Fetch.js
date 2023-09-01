@@ -1,4 +1,5 @@
 import React from 'react';
+import {DataContainer,TableHead,Table,TableRow,Data} from '../stylings/fetchStylings'
 import { useEffect } from 'react';
 import FetchUserData from '../redux/action';
 import { connect, useDispatch } from 'react-redux';
@@ -12,26 +13,28 @@ const FetchContainer = ({ userData }) => {
   // console.log(userData, 'ss');
   return (
     <div>
-      <div>
-        <table className="userTable">
-          <thead>
-            <th>Name</th>
-            <th>Mail Id</th>
-          </thead>
+      <DataContainer>
+        <Table>
+          <TableHead>
+            <Data>Name</Data>
+            <Data>First Name</Data>
+            <Data>Last Name</Data>
+            <Data>Mail Id</Data>
+          </TableHead>
 
           {userData &&
             userData?.data?.map((user, i) => {
               return (
-                <tr key={i}>
-                  <td>{user?.id}</td>
-                  <td>{user?.first_name}</td>
-                  <td>{user?.last_name}</td>
-                  <td>{user?.email}</td>
-                </tr>
+                <TableRow key={i}>
+                  <Data>{user?.id}</Data>
+                  <Data>{user?.first_name}</Data>
+                  <Data>{user?.last_name}</Data>
+                  <Data>{user?.email}</Data>
+                </TableRow>
               );
             })}
-        </table>
-      </div>
+        </Table>
+      </DataContainer>
     </div>
   );
 };

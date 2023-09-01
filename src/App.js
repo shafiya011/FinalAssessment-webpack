@@ -1,34 +1,22 @@
 import React from 'react';
-import HomePage from './components/homePage';
-import Header from './components/header';
-import ActivityFeed from './components/activityFeed';
-import {
-  ProjectContainer,
-  ContentContainer,
-  Apps,
-} from './stylings/projectContainer';
-import MenuBar from './components/menuBar';
-import store from './redux/store';
-import { Provider } from 'react-redux';
-import FetchContainer from './components/Fetch';
-import ReactDOM from 'react-dom';
-import Fetch from './components/Fetch';
-import { FeedContainer } from './stylings/activityFeedStylings';
+import BillingReport from './components/billingReport';
+import UserApi from './components/fetchApp';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 const App = () => {
   return (
-    // <Apps>
-    //   <MenuBar />
-    //   <ProjectContainer>
-    //     <Header />
-    //     <ContentContainer>
-    //       <HomePage />
-    //       <ActivityFeed />
-    //     </ContentContainer>
-    //   </ProjectContainer>
-    // </Apps>
-    <Provider store={store}>
-      <FetchContainer />
-    </Provider>
+   
+    <Router>
+       <BillingReport/>
+        <Routes>
+          
+          {/* <Route path="/billingreport"  element={<BillingReport />}></Route> */}
+          <Route path="/orguserapi" exact element = {<UserApi/>}> </Route>
+        </Routes>
+      
+    </Router>
+  
+   
   );
 };
 export default App;
