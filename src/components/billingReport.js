@@ -1,17 +1,16 @@
-import React from 'react'
+import React from 'react';
 import HomePage from '../components/homePage';
 import Header from '../components/header';
 import ActivityFeed from '../components/activityFeed';
 import {
-    ProjectContainer,
-    ContentContainer,
-    Apps,
-  } from '../stylings/projectContainer'
-  import MenuBar from '../components/menuBar'
+  ProjectContainer,
+  ContentContainer,
+  Apps,
+} from '../stylings/projectContainer';
+import MenuBar from '../components/menuBar';
 const BillingReport = () => {
   return (
-
-       <Apps>
+    <Apps>
       <MenuBar />
       <ProjectContainer>
         <Header />
@@ -21,8 +20,7 @@ const BillingReport = () => {
         </ContentContainer>
       </ProjectContainer>
     </Apps>
-    
-  )
-}
+  );
+};
 
-export default BillingReport ;
+export default BillingReport;

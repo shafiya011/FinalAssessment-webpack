@@ -31,7 +31,7 @@ const FetchUserData = () => {
       )
       .then((res) => {
         const data = res?.data?.data;
-        // console.log(data, 'hhh');
+        console.log(data, 'only one time render');
         dispatch(FetchDataSuccess(data));
       })
       .catch((err) => {

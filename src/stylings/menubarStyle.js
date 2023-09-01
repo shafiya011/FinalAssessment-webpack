@@ -22,7 +22,6 @@ export const Icons = styled.div`
 export const IconDivider = styled.div`
   width: 50px;
   height: 1px;
-  //   marging: 10px auto;
   margin: auto;
   text-align: center;
 `;

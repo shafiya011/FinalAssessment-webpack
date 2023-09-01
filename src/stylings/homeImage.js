@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 export const HomeBackgroundContainer = styled.div`
   width: 319px;

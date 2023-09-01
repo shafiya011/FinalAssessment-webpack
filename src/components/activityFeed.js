@@ -31,7 +31,7 @@ const ActivityFeed = () => {
       <ActivityHead>
         <Title>Activity Feeds</Title>
         <ViewMore>
-          <a>View More</a>
+          <a>View All</a>
         </ViewMore>
       </ActivityHead>
       <ContentWrapper>

@@ -12,9 +12,6 @@ export const ContentContainer = styled.div`
   display: flex;
   width: 100%;
   flex-direction: row;
-  // align-items: stretch;
-  // flex-grow: 1;
-  // flex-shrink: 0;
   @media (max-width: 400px) {
     width: 100%;
     display: block;
@@ -26,4 +23,5 @@ display:flex;
 width:100vw;
 margin:0px
 padding:0px;
-box-sizing:border-box;`;
+box-sizing:border-box;
+box-shadow: 0px 5px 10px 0px rgba(99, 116, 135, 0.2);`;

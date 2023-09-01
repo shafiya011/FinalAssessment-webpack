@@ -16,7 +16,6 @@ const DataReducer = (state = initialState, action) => {
         loading: true,
       };
     case FETCH_DATA_SUCCESS:
-      // console.log(action.payload, 'lll');
       return {
         ...state,
         loading: true,
